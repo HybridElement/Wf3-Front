@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Atelier CSS</title>
+        <!-- METHODE 1 : comment ajouter un fichier css à ma page -->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div id="page">
+            <div class="header">
+                <div class="BandeauDuHaut">
+                </div>
+                <ul>
+                    <li class="current">
+                        <a href="index.html">Accueil</a>
+                    </li>
+                    <li><a href="#">Présentation</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <!-- ./header -->
+
+
+
+            <div class="contenu">
+                <h1>Lost In Kiev</h1>
+                <div class="illustration">
+                    <img src="image/photo_article_lik.jpg"
+                    alt="Lost In Kiev">
+                </div>
+                <div class="article">
+                    <p>
+                        Le futur Lost In Kiev se crée en 2007 pour affûter un post-rock instrumental inspiré
+                        par Red Sparowes, Explosions In The Sky, Tang ou Radiohead. Après 3 ans, la joyeuse
+                        formation perd ses deux guitaristes à un an d’intervalle. Outch. S’engage alors une période
+                        d’intégration de leurs émérites remplaçants et d’un 5e membre, préposé aux machines.
+                        Tant qu’à remanier, autant faire les choses en grand.
+                    </p> 
+                    <p>
+                        Quelques rounds d’observation plus tard, cette famille fraîchement recomposée
+                        s’atèle à adapter son répertoire aux influences des nouveaux venus (Cult Of Luna,
+                        Amen Ra, Daïtro) et enchaîne quelques concerts aux côtés de têtes d’affiche plus
+                        que recommandables comme Rosetta, Maybeshewill ou Listener. L’heure de la stabilité
+                        a enfin sonné. Même le destin, qui ne trouve rien de mieux que d’envoyer certains
+                        membres voyager dans des contrées plus ou moins reculées - pour des durées plus ou
+                        moins longues -, ne parvient pas à casser cette belle dynamique. Se sentant pousser
+                        des ailes, Lost In Kiev décide de transformer l’essai en enregistrant son premier album
+                        : Motions. Après un split avec Zero Absolu l'année suivante, il faut toutefois attendre
+                        quelques années avant que le combo, après un changement de line-up, revienne pour Nuit Noire.
+                    </p>
+
+                </div>
+            </div>
+            <!-- ./contenu -->
+
+            <div class="footer">
+                <div class="gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167998.10803373056!2d2.2069770643680573!3d48.85877410312378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis!5e0!3m2!1sfr!2sfr!4v1508403457999" width="400" height="300" frameborder="0" style="border:0" allowfullscreen>
+                        </iframe>
+                </div>
+                
+                <div class="newsletter">
+                    <form name="Newsletter" action="FichierNewsletter.php" method="POST">
+                        <fieldset>
+                            <legend>Newletter</legend>
+                            <input type="text" name="nom" placeholder="Nom">
+                            <input type="text" name="prenom" placeholder="Prénom">
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="submit" value="s'inscrire">                            
+                        </fieldset>
+                        
+                    </form>
+                </div>
+                <div class="contact">
+
+                    <h1>Contact</h1>
+                    <ul>
+                        <li><a href="https://lostinkiev.bandcamp.com/merch">Shop</a></li>
+                        <li><a href="https://www.facebook.com/lostinkiev">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/user/Wearelostinkiev">Youtube</li></a>
+                        <li><a href="https://twitter.com/LostInKiev">Twitter</a></li>
+                        <li><a href="https://open.spotify.com/artist/4VBq7oPj5Yi4Yfx4hopGY3">Spotify</a></li>
+                    </ul>
+                    <adress>
+                        <a href="tel:+33642284103">06 42 28 41 03</a>
+                        <br>
+                        <a href="mailto:banceflorent@gmail.com">banceflorent[at]gmail.com</a>
+                    </adress>
+                </div>
+            </div>
+            <!-- ./footer -->
+
+        </div>
+        <!-- #/page -->    
+    </body>
+
+</html>
