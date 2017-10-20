@@ -105,7 +105,8 @@ a, h1, h3 {
     au passage de la souris. -*/
 
 a:hover {
-    color:rgb(170, 1, 1);
+    transition-duration: 1s;
+    color:white;
 }
 
 /*--
@@ -137,12 +138,15 @@ a:hover {
     margin: 0 auto;
     
     /*-- Je rajoute à ma page un fond blanc --*/
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(200, 200, 200);
 }
 
 /*-- Je souhaite changer la couleur du fond de ma page -- */ 
 body {
-    background-color:rgba(25, 25, 26, 0.637);
+    /*background-color:rgba(31, 31, 31, 1);*/
+    background-image: url(../image/background_lik_2.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 /* -------------
@@ -158,7 +162,7 @@ body {
 #page {
     margin: 80px auto;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px rgb(53, 52, 52);
+    box-shadow: 10px 5px 5px black;
 }
 
 /*------------------
@@ -176,10 +180,13 @@ CORRECTION
 
     /* J'applique une ombre autour de ma page */
     /*offset-x | offset-y | blur-raduis | color */
-    box-shadow: 0px 0px 15px rgb(46, 46, 46);
+    box-shadow: 0px 0px 15px rgb(15, 15, 15);
 
     /* j'applique une marge de 5px autour de ma page*/
     padding: 5px;
+
+    /*-- Overflow avec la valeur "hidden", va supprimer l'affichage de tous les éléments qui dépassent de la div#paage --*/
+    overflow: hidden;
 }
 
 .contenu h1 {
@@ -188,8 +195,10 @@ CORRECTION
 
     /* je ne souahite pas que le titre soit en gras */
     font-weight: normal;
-    /*-- solid : Ligne par défaut, dotted : petis-points, dashed : trait d'union --*/
-    border-bottom: 1px dashed black;
+    /*-- solid : Ligne par défaut, dotted : petis-points, dashed : trait d'union 
+    border-bottom: 1px dashed black;--*/
+    background-image:linear-gradient(to right, rgb(200, 200, 200)25%, rgb(58, 68, 65)50%);
+    color: white;
 }
 
 .BandeauDuHaut {
@@ -197,14 +206,146 @@ CORRECTION
     height: 360px;
     background: url(../image/bandeau_lik.jpg) no-repeat;
     background-size: cover;
-    background-position-y: 20px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+    background-position-x: -8px;
 
 }
 
+.header li:hover{
+    transition-duration: 2s;
+    background-color: rgba(90, 91, 91, 0.692);
+    
+}
+.header a:hover{
+    transition-duration: 2s;
+    color: white;
+}
 
+/* --
+    CSS pour Illustration et Article
+-- */
 
+.contenu {
+    /* -- Dimension & Positionnement --*/
+    width: 100%;
+    height: auto;
+    float: left;
+    /* -- Décoration --*/
+}
+
+.illustration  {
+     /* -- Dimension & Positionnement --*/
+     width: 480px;
+     height: auto;
+     float: left;
+    
+}
 
 .illustration img {
-    width: 960px;
+    max-width: 100%;
+    padding-top: 1em;
+
+}
+
+.article {
+     /* -- Dimension & Positionnement --*/
+     width: 460px;
+     height: auto;
+     float: left;
+     /* -- Décoration --*/    
+     margin: 0 10px 0 10px;
+     font-family: 'Ubuntu', sans-serif;
+     text-align: justify;
+}
+
+.article p {
+    padding: 0 15px 0 15px;
+}
+
+.article span{
+    font-weight: bold;
+    color: rgb(40,60,50);
+}
+
+.footer {
+    width: 100%;
     height: auto;
+    float: left;
+    background-image:linear-gradient( rgb(201, 201, 201), rgba(58, 68, 65, 0.568));
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.gmap {
+    width: 440px;
+    float: left;
+    padding: 10px;
+}
+
+.footer h1 {
+    padding-left: 15px;
+    background-image:linear-gradient(to left, rgb(200, 200, 200)25%, rgb(58, 68, 65)50%);
+    font-weight: normal;
+}
+.newsletter {
+    width: 200px;
+    float: left;
+}
+
+.contact {
+    width: 230px;
+    float: left;
+    padding-left: 50px;
+}
+
+.contact ul{
+    list-style: none;
+    padding: 0px;
+}
+
+.contact ul a, .contact a {
+    text-decoration: none;
+    color: rgb(36, 36, 36);  
+}
+
+.contact ul a:hover, .contact a:hover {
+    color:white;
+}
+
+/*-- style du pied de page --
+
+|||||||||||||||||||-------------------- A récupérer sur Github --------------- |||||||||||||||||||
+
+|||||||||||||||||||------------------------avec contact----------------------- |||||||||||||||||||
+
+---*/
+
+.newsletter fieldset {
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 8px;
+    border: 2px solid white;
+    color: white;
+    height: 180px;
+}
+
+.newsletter input {
+    width: 86,5%;
+    height: 25px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+
+.newsletter input[type=submit]{
+    width: 100%;
+    height: 35px;
+    border:0px;
+    background: rgb(209, 208, 208);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact ul i{
+    margin-right: 5px;
 }
