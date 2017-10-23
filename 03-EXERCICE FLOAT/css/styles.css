@@ -1,0 +1,34 @@
+#all {
+    width: 1004px;
+    margin: 0 auto;
+}
+#g {
+    height: 750px;
+    width: 500px;
+    background-color: #490202;
+    float:left;
+}
+
+.p1, .p2, .p3, .p4, .p5, .p6{
+    height: 250px;
+    width: 250px;
+    float:left;
+}
+.p1{
+    background-color: #bb1717
+}
+.p2 {
+    background-color: #bb6617
+}
+.p3 {
+    background-color: #abbb17
+}
+.p4 {
+    background-color: #74bb17
+}
+.p5 {
+    background-color: #17bb6e
+}
+.p6 {
+    background-color: #2217bb
+}

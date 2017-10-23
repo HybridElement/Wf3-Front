@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-p, a, h1 {
+p, a, h1, h2, h3, input {
     font-family: 'Source Code Pro', monospace;
 }
 
@@ -79,51 +79,56 @@ a:hover{
    margin: 190px auto 0px auto;
    background-image: url(../image/illustration2.jpg) ;
    background-size: cover;
-   margin-bottom: -8px;
    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.219);
 }
 
 aside{
     width: 50%;
-    max-width: 500px;
+    max-width: 550px;
     float: left;
-    max-height: 353px;
+    background-color: white;
+    max-height: 500px;
 }
 
 aside img {
     width: 100%;
     border: 10px solid white;
-    padding: -10px;
+    margin-top:24px;
+    margin-bottom: 24px;
 }
 
 article {
-    width: 50%;
+    width: 48%;
     background-color: white;
     height: auto;
     float: left;
-    max-height: 353px;
+    padding-left: 20px;
+    max-height: 500px;
 }
 article h1 {
-    margin: 5px 15px 0 15px;
+    margin: 5px 15px 0 15px;;
 }
 article p {    
     margin: 15px;
+    text-align: center;
 }
 
 article span{
     font-weight: bold;
 }
-.video{
-    width:100%;
-    max-width: 985px;
-    background-color: white;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    float: left;
+.alb { 
+    float:left;
+    margin: 15px;
 }
-.video iframe{
-    float: left;
-    padding-right:15px;
+.alb img{
+    -webkit-filter: grayscale(100%);
+}
+.alb img:hover{
+    transition-duration: 0.5s;
+    -webkit-filter: grayscale(0%);
+}
+.alb p{
+    font-size: 10px;
 }
 
 .partenaires {
@@ -136,19 +141,14 @@ article span{
     margin: 15px;
 }
 .partenaires img{
+    width:"20%";
     float: left;
     padding: 15px;
-    text-align: center;
-    margin:34px;
-    -webkit-filter: grayscale(100%);
-}
-.partenaires img:hover{
-    -webkit-filter: grayscale(0%);
-    transition-duration: 1s;
+    margin: 0 auto;
 }
 .imgpart{
     height: 230px;
-    width: 1000px;
+    width: 730px;
     margin: 0 auto;
 }
 
@@ -229,4 +229,40 @@ footer h1 {
 
 .contact ul i{
     margin-right: 5px;
+}
+
+
+#cont{
+    background-color: white;
+    padding-left: 15px;
+    margin: 0 auto;
+}
+
+
+#cont input {
+    width: 480px;
+    height: 25px;
+    margin-bottom: 25px;
+    padding: 15px 11px;
+    text-align: center;
+}
+
+#cont input[type=submit]{
+    width: 500px;
+    height: 25px;
+    border:0px;
+    background: rgb(27, 27, 27);
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 35px;
+    color: white;
+    margin-bottom: 25px;
+}
+textarea {
+    width: 500px;
+    margin-bottom: 25px;
+}
+#messcont {
+    width: 500px;
+    margin: 0 auto;
 }
