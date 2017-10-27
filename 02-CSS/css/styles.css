@@ -239,6 +239,7 @@ CORRECTION
      width: 480px;
      height: auto;
      float: left;
+     position: relative;
     
 }
 
@@ -246,6 +247,12 @@ CORRECTION
     max-width: 100%;
     padding-top: 1em;
 
+}
+.loupe {
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom:10px;
 }
 
 .article {

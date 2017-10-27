@@ -88,6 +88,8 @@ header{
     background: -ms-linear-gradient(-90deg, #ffffff 0%, #dddddd 100%);
     background: linear-gradient(180deg, #ffffff 0%, #dddddd 100%);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.65);
+    position: relative;
+    z-index: 1;
 }
 
 /*----------------------------------------------|
@@ -190,7 +192,7 @@ header > nav li:nth-child(3) a{
 |                                               |
 |----------------------------------------------*/
 
-section {
+/* section {
     width: 100%;
     height: auto;
 }
@@ -271,4 +273,178 @@ section p span {
 article > img{
     position: absolute;
     margin: 93px 38%;
+} */
+
+/*----------------------------------------------|
+|                                               |
+|                   PROJECTEUR                  |
+|                                               |
+|----------------------------------------------*/
+.projecteur {
+    width: 100%;
+    height: 650px;
+    float:left;
+    overflow:hidden;
+    position: relative;
+}
+
+/*----------------------------------------------|
+|                                               |
+|             COMMENCER MON SEJOUR              |
+|                                               |
+|----------------------------------------------*/
+.bandeaurouge{
+    background-color:  #fe3224;
+    width: 100%;
+    height: 50px;
+    float:left;
+    text-align: center;
+    position:relative;
+}
+.bandeaurouge img{
+    margin-top: -16px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.composersejour{
+    width: 100%;
+    height: 120px;
+    float:left;
+    border-bottom-left-radius: 10px;
+    background: -webkit-radial-gradient(circle farthest-side at 50%, #ffffff 0%, #febeb9 100%);
+    background: -moz-radial-gradient(circle farthest-side at 50%, #ffffff 0%, #febeb9 100%);
+    background: -o-radial-gradient(circle farthest-side at 50%, #ffffff 0%, #febeb9 100%);
+    background: -ms-radial-gradient(circle farthest-side at 50%, #ffffff 0%, #febeb9 100%);
+    background: radial-gradient(circle farthest-side at 50%, #ffffff 0%, #febeb9 100%);
+}
+
+.composersejour p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: black;
+    text-align: center;
+}
+
+.composersejour p span {
+    text-decoration: underline;
+}
+
+p span.red{
+    color: #fe3224;
+    text-decoration: inherit;
+}
+p span.brown{
+    color: #bc8242;
+    text-decoration: inherit;
+}
+p span.blue{
+    color: #3860a7;
+    text-decoration: inherit;
+}
+p span.green{
+    color: #08a640;
+    text-decoration: inherit;
+}
+p span.roboto{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Bouton BTN SEJOUR */
+.btn-sejour{
+    width: 346px;
+    height: 37px;
+    margin: 0 auto;
+    
+    position: relative;
+}
+.btn-sejour a{
+    width: 100%;
+    height: 37px;
+    display: block;
+    
+    background: -webkit-linear-gradient(-90deg, #fe8e86 0%, #fe3224 100%);
+    background: -moz-linear-gradient(-90deg, #fe8e86 0%, #fe3224 100%);
+    background: -o-linear-gradient(-90deg, #fe8e86 0%, #fe3224 100%);
+    background: -ms-linear-gradient(-90deg, #fe8e86 0%, #fe3224 100%);
+    background: linear-gradient(180deg, #fe8e86 0%, #fe3224 100%);
+   
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 37px;
+    
+    position: relative;
+
+}
+
+.cursor{
+    position: absolute;
+    right:0px;
+    bottom:-20px;
+
+    visibility:hidden;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-sejour:hover .cursor{
+    visibility: visible;
+    opacity: 1;
+    bottom: -8px;
+    transform: rotate(-15deg);
+}
+
+.btn-sejour a::before{
+    width: 147px;
+    height: 36px;
+    background:url(../image/fleche.png);
+    content: "";
+    position:absolute;
+    top:0px;
+    left:-170px;
+}
+.btn-sejour a::after{
+    width: 147px;
+    height: 36px;
+    transform: rotate(180deg);
+    background:url(../image/fleche.png);
+    content: "";
+    position:absolute;
+    top:0px;
+    right:-170px;
+}
+
+.projecteur nav{
+    position:absolute;
+    top: 0;
+    left: 170px;
+    border-left-style: solid;
+    border-left-width:5px;
+    border-left-color: #fe3224 ;
+
+}
+.projecteur nav ul{
+    margin:0;
+    padding: 0;
+}
+.projecteur nav ul li{
+    background: -webkit-linear-gradient(-90deg, #fbfbfb 0%, #bbbbbb 100%);
+    background: -moz-linear-gradient(-90deg, #fbfbfb 0%, #bbbbbb 100%);
+    background: -o-linear-gradient(-90deg, #fbfbfb 0%, #bbbbbb 100%);
+    background: -ms-linear-gradient(-90deg, #fbfbfb 0%, #bbbbbb 100%);
+    background: linear-gradient(180deg, #fbfbfb 0%, #bbbbbb 100%);
+    padding: 3px 30px ;
+    list-style: none;
+}
+.projecteur nav ul li:first-child{
+    padding-top: 10px;
 }
