@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->  
+ 
    
 </head>
 <body>
@@ -26,15 +27,53 @@
                         <ul>
                             <li><img src="./assets/img/logo-fb.png"></li>
                             <li><a href="index.html">Accueil</a></li>
-                            <li><a href="index.html">Nos Photos</a></li>
-                            <li><a href="index.html">Nos Videos</a></li>
+                            <li><a href="NOS-VIDEOS">Nos Photos</a></li>
+                            <li><a href="NOS-PHOTOS">Nos Videos</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
             <div class="row">
                     <div class="col-xs-12 proj">
-                        <img src="./assets/img/proj.jpg">
+                        <div id="MonCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                              <li data-target="#MonCarousel" data-slide-to="0" class="active"></li>
+                              <li data-target="#MonCarousel" data-slide-to="1"></li>
+                              <li data-target="#MonCarousel" data-slide-to="2"></li>
+                            </ol>
+    
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                              <div class="item active">
+                                <img src="./assets/img/ph1.jpg" alt="CS:GO">
+                                <div class="carousel-caption">
+                                    
+                                </div>
+                              </div>
+                            <div class="item">
+                                <img src="./assets/img/ph2.jpg" alt="Inferno">
+                                <div class="carousel-caption">
+                                    
+                                </div>
+                              </div>
+    
+                              <div class="item">
+                                <img src="./assets/img/ph3.jpg" alt="Terroristes">
+                                <div class="carousel-caption">
+                                </div>
+                              </div>
+                            </div>
+                        <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#MonCarousel" data-slide="prev">
+                              <span class="glyphicon glyphicon-chevron-left"></span>
+                              <span class="sr-only">Précédente</span>
+                            </a>
+                            <a class="right carousel-control" href="#MonCarousel" data-slide="next">
+                              <span class="glyphicon glyphicon-chevron-right"></span>
+                              <span class="sr-only">Suivante</span>
+                            </a>
+                          </div>
                     </div>
             </div>
             <div class="row">
@@ -117,12 +156,16 @@
 
 
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+    <!-- jQuery CDN -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 
     <!-- Bootstrap JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
  
 </body>
 </html>

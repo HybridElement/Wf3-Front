@@ -47,6 +47,7 @@ nav ul li a:hover{
 }
 .proj{
     background-color: white;
+    
 }
 
 .proj img{
@@ -60,11 +61,7 @@ nav ul li a:hover{
     background-attachment: fixed;
 }
 
-@media screen and (min-width: 200px) and (max-width: 640px) {
-    .col-sm-3:nth-child(2), .col-sm-3:nth-child(3){
-        
-    }
-  }
+
 .img-responsive{
     /* max-width: 500%;
     max-height: 500px; */
@@ -72,7 +69,7 @@ nav ul li a:hover{
 }
 
 #NOS-PHOTOS {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     padding:20px;
 }
 #NOS-VIDEOS, #VIDEOS-SUITE {
