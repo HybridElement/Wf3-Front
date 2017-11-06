@@ -8,3 +8,7 @@
         - Afficher ensuite un récapitulatif dans la page.
         Bonjour [PRENOM], tu as [AGE] ! 
 -- */
+
+var Prenom = prompt("Quel est votre Prénom?");
+
+var age = prompt("Bonjour " + Prenom + ", quel age as-tu?");
