@@ -63,53 +63,109 @@ II. Afficher sur la page (à l'aide de document.write) pour chaque étudiant, la
 
 var PremierTrimestre = [
     {
-        "nom"       :   "LIEGEARD",
-        "prenom"    :   "Hugo",
-        "moyenne"   :   {
-                            "francais" : 4,
-                            "math"     : 8,
-                            "physique" : 18
+        nom       :   "LIEGEARD",
+        prenom    :   "Hugo",
+        moyenne   :   {
+                            francais : 4,
+                            math     : 8,
+                            physique : 18
                         }
     },
     {
-        "nom"       :   "MANAS",
-        "prenom"    :   "Tanguy",
-        "moyenne"   :   {
-                            "francais" : 6,
-                            "math"     : 15,
-                            "physique" : 9,
-                            "anglais"  : 15.5
+        nom       :   "MANAS",
+        prenom    :   "Tanguy",
+        moyenne   :   {
+                            francais : 6,
+                            math     : 15,
+                            physique : 9,
+                            anglais  : 15.5
                         }
     },
     {
-        "nom"       :   "ARAUJO",
-        "prenom"    :   "Thiago",
-        "moyenne"   :   {
-                            "francais" : 10,
-                            "math"     : 15,
-                            "physique" : 16
+        nom       :   "ARAUJO",
+        prenom    :   "Thiago",
+        moyenne   :   {
+                            francais : 10,
+                            math     : 15,
+                            physique : 16
                         }
     },
     {
-        "nom"       :   "BOSS",
-        "prenom"    :   "Hugo",
-        "moyenne"   :   {
-                            "francais" : 12,
-                            "math"     : 6,
-                            "physique" : 11
+        nom       :   "BOSS",
+        prenom    :   "Hugo",
+        moyenne   :   {
+                            francais : 12,
+                            sport    : 6,
+                            physique : 11
                         }
     },
     {
-        "nom"       :   "HEGO",
-        "prenom"    :   "Nathan",
-        "moyenne"   :   {
-                            "francais" : 19,
-                            "math"     : 7,
-                            "physique" : 15
+        nom       :   "HEGO",
+        prenom    :   "Nathan",
+        moyenne   :   {
+                            francais : 19,
+                            math     : 7,
+                            anglais  : 15
                         }
     }
 ];
 
-for(var i=0, )
+// https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/for...in
 
-https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/for...in
+// -- Petite fonction de raccourcis (lesFlemards.js)
+
+function w(t) {
+    document.write(t);
+}
+
+function l(e) {
+    console.log(e);
+}
+
+
+l(PremierTrimestre);
+
+
+w('<ol>');
+//-- Je souhaite afficher la liste de mes étudiants
+for(let i=0; i < PremierTrimestre.length; i++) {
+
+    //-- On récupère l'Objet Etudiant de l'itération
+    let Etudiant = PremierTrimestre[i];
+
+    //-- Apercu dans la console
+    l(Etudiant);
+
+    var NombreDeMatiere = 0, SommeDesNotes = 0;
+
+    w('<li>');
+    //-- Afficher le prénom et le nom d'un Etudiant
+        w(Etudiant.prenom + " " + Etudiant.nom);
+
+        w('<ul>');
+            for(let matiere in Etudiant.moyenne){
+                l(matiere);
+                //-- On récupère la moyenne de l'étudiant pour une matière.
+                l(Etudiant.moyenne[matiere]);
+
+                NombreDeMatiere++;
+                SommeDesNotes += Etudiant.moyenne[matiere];
+
+                w('<li>');
+                    w(matiere + " : " + Etudiant.moyenne[matiere]);
+
+                w('</li>');
+        } //-- Fin de la boucle matière
+        
+            w('<li>');
+                w("<strong>Moyenne Générale : </strong>" + (SommeDesNotes / NombreDeMatiere).toFixed(2) );
+            w('</li>');
+
+        w('</ul>');
+
+    w('</li>');
+
+
+
+}
+w('</ol>');
