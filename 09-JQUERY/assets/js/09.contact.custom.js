@@ -9,13 +9,48 @@ $(function() {
         -------------------------------------------------------------- */
     
         // -- Fonction ajouterContact(Contact) : Ajouter un Contact dans le tableau de Contacts, mettre à jour le tableau HTML, réinitialiser le formulaire et afficher une notification.
-        function ajouterContact(UnContact) {}
+        function ajouterContact(UnContact) {
+            //--Ajouter un contact dans CollectionDeContact
+            CollectionDeContacts.push(UnContact);
+
+            //-- Observer l'ajout des contact dans la collection
+            console.log(CollectionDeContacts);
+
+            //-- Cacher la phrase "aucun contact"
+            $('.aucuncontact').hide();
+
+            //-- Mise a jour du HTML
+            $(`
+                <tr>
+                    <td>${UnContact.nom}</td>
+                    <td>${UnContact.prenom}</td>
+                    <td>${UnContact.email}</td>
+                    <td>${UnContact.tel}</td>
+                </tr>
+            `).appendTo($('#LesContacts').find('tbody'));
+
+            //-- Réinitialisation du formulaire
+            reinitialisationDuFormulaire();
+            
+
+            //-- Afficher une notification
+            afficheUneNotification();
+        }
     
         // -- Fonction RéinitialisationDuFormulaire() : Après l'ajout d'un contact, on remet le formulaire à 0 !
-        function reinitialisationDuFormulaire() {}
+        function reinitialisationDuFormulaire() {
+            //-- En jQuery
+            $('#contact').get(0).reset();
+
+
+            //-- Autre Méthode :
+            $('#contact .form-control').val("");
+        }
     
         // -- Affichage d'une Notification
-        function afficheUneNotification() {}
+        function afficheUneNotification() {
+            $('.alert-contact').fadeIn().delay(3000).fadeOut();
+        }
     
         // -- Vérification de la présence d'un Contact dans Contacts
         function estCeQunContactEstPresent(UnEmail) {
@@ -62,9 +97,9 @@ $(function() {
         $('#contact').on('submit', function(e) {
     
             // -- Voir le contenu de l'évènement
-    
+            console.log(e);
             // -- Stopper la redirection de la page
-    
+            e.preventDefault();
             // -- Récupération des champs à vérifier
             var nom, prenom, email, tel;
             nom = $('#nom');
@@ -83,7 +118,7 @@ $(function() {
                  mesInformationsSontValides = false;
              }
                 //-- Vérification du mail :
-                if(!validateEmail(email.val()){
+                if(!validateEmail(email.val())){
                  mesInformationsSontValides = false;
                 }
              if(tel.val().length == 0){
@@ -95,22 +130,30 @@ $(function() {
 
                 let Contact = {
                     //cle   //valeur
-                    nom     :nom.val();
-                    prenom  :prenom.val();
-                    email   :email.val();
-                    tel     :tel.val();
+                    nom     :nom.val(),
+                    prenom  :prenom.val(),
+                    email   :email.val(),
+                    tel     :tel.val(),
                 }
             //-- Observons dans la console
             console.log(Contact);
 
             //-- Vérification avce EstCeQUunContactEstPresent
-            if(!estCeQunContactEstPresent(email.val))
+            if(!estCeQunContactEstPresent(email.val())){
+
+                //-- Ajout du Contact
+                ajouterContact(Contact);
 
              } else {
-                alert('ATTENTION\n Veuillez remplir totu les champs.'); 
-                
+                alert('ATTENTION\n Ce contact est déjà présent.');
+                reinitialisationDuFormulaire();
+             }
+             
+             
+            } else {                
             // -- Alert si erreur dans l'un des champs
+            alert('ATTENTION\n Veuillez remplir tout les champs.')
+            }
+    });
     
-        });
-    
-    }); // -- Fin de jQuery READY !
+    }); //-- Fin de jQueryREADY 
