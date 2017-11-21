@@ -1,0 +1,98 @@
+main {
+    margin-bottom: 500px;
+}
+.contact {
+    background: #EEE;
+    text-align: center;
+    padding: 40px 0;
+    margin: 40px 0;
+}
+
+.contact h1 {
+    margin: 0;	
+}
+
+.alert-contact {
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+body{
+    background: black;
+
+}
+
+/*-------------------------
+
+        NAV BAR APPLE
+
+---------------------------*/
+
+.navbar-apple{
+    background-color: black;
+    margin-bottom: 0px;
+}
+
+.navbar-apple ul{}
+.navbar-apple ul li{}
+.navbar-apple ul li a{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
+a.navbar-brand{
+    color: white !important;
+}
+
+/*-------------------------
+
+        SECTION MOBILE
+
+---------------------------*/
+#mobile {
+    background-color: #141414;
+
+}
+
+#mobile ul{
+    margin: 0;
+    text-align: center;
+    padding: 0px;
+
+
+}
+#mobile ul li{}
+
+#mobile ul li a{
+
+}
+
+/*-------------------------
+
+        SECTION proj
+
+---------------------------*/
+
+#projecteur{
+    text-align: center;
+    padding-top: 20px;
+
+}
+#projecteur img{
+    max-width: 100%;
+    margin: 20px 0 0 0;
+}
+#projecteur h2{    
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: white;}
+#projecteur h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    color: white;
+    margin-top:0;
+}
+#projecteur p{}
