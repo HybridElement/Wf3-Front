@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+h1{
+    font-family: 'Merienda', cursive;    
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    background-color:#061339; 
+    width: 100%;
+    margin-bottom: 0px;
+    border-radius: 0px;
+    
+}
+.navbar .row{
+    float: left;
+    max-width: 1150px;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar h1{
+    color: white;
+    font-size: 20px;
+}
+
+header{
+    width: 100%;
+    height : 180px;
+    background-image: url(../img/background.jpg);
+    text-align: center;
+}
+header h1{
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size-adjust: 2em;
+    padding: 50px 15px;
+    
+}
+
+.container h1{
+    color: #2F4073;
+}
+legend{
+border-bottom: 0px;
+}
+fieldset {
+    background-color: #f5f5f5;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 2px;
+    padding: 5px;
+}
+fieldset > .form-group{
+    padding-top: 40px;
+}
+.btn-primary{
+    background-color: green;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.btn-primary:hover{
+    background-color: #061339;
+    transition-duration: 0.5s;
+}
+.form-group .col-xs-12{
+    padding-left:0px !important;
+}
+@media screen and (max-width: 510px) {
+    fieldset{
+      margin:30px 15px;
+    }
+    fieldset > .form-group{
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 360px) {
+    fieldset{
+      margin:75px 15px;
+    }
+    fieldset > .form-group{
+        padding-top: 10px;
+    }
+}
+aside {
+    padding:15px;
+}
+
+
+
+
+#infos{
+    background-color:#dddddd;
+}
+#infos .row{    
+    max-width: 1150px;
+    width:100%;
+    margin: 0 auto;
+}
+#infos  h1{
+    padding:10px;
+    color:#2F4073;
+}
+#infos  p{
+    padding: 10px;
+    text-align: justify;
+}
+#infos img {
+    background-color: #7885a5;  
+}
+#infos img:hover{
+    background-color: #061339;
+    transition-duration: 0.5s;
+}
+footer{
+    height: 30px;
+    width: 100%;
+    background-color:#061339;
+}
+footer p{
+    float: right;
+    padding-right: 15px;
+    color: white;
+    padding-top: 5px;
+}
