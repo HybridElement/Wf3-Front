@@ -42,7 +42,7 @@ p, h1, h2, h3 {
     #logo img{
         width: 30%!important;;
         margin: auto!important;;
-        padding-top : 50px !important;
+        padding-top : 100px !important;
     }
     
 }
@@ -95,6 +95,7 @@ p, h1, h2, h3 {
     display: inline-block;
 }
 .navbar-right li a{
+    padding: 15px 5px;
     
 }
 .navbar-right li a i{
@@ -127,7 +128,7 @@ p, h1, h2, h3 {
 /* CONTACT */
 .contact{
     background-color: black;
-    height: 500px;
+    min-height: 210px;
     width: 100%;
     color: white;
 
@@ -153,10 +154,114 @@ address a:hover{
             #000000 100%);
     height:100vh;
     opacity: 0.9;
+    padding: 0 70px;
 }
 
 /* VIDEO */
 .cont-vid  h1{
     color: white;
-    padding: 20px 0 20px 70px;
+    padding: 20px 0;
+}
+.ap {
+    position: relative;
+    width: 100%;
+}
+h4, h3, h2 {
+    color: white;
+}
+.groupap{
+    margin: 0 auto;
+    height: 100%;
+}
+
+.col-lg-4{
+    width: 30%;
+}
+
+@media screen and (max-width: 1200px){
+.col-md-6{
+    width: 46%;
+}
+}
+@media screen and (max-width: 770px){
+    .col-md-6{
+        width: 100%;
+    }
+}
+.mp{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin: 10px;
+}
+figure {
+
+	display: block;
+	cursor: pointer;
+	overflow: hidden;
+    border: 1px solid #fff;
+    position: relative;
+    box-sizing: content-box;
+}
+
+figure:hover figcaption {
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	filter: alpha(opacity=100);
+	opacity: 1;
+	top: 0;
+}
+
+figcaption {
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	filter: alpha(opacity=0);
+	opacity: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 250px;
+	background: rgba(0,0,0,.9);
+	color: #fff;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+    box-sizing: content-box;
+}
+
+figcaption h4 {
+	color: #ffffff;
+	padding: 10px 20px;
+	margin-bottom: 0;
+	position: relative;
+	right: 100%;
+	margin-top: 37px;
+	font-size: 30px;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+figure:hover h4,figure:hover p {
+	left: 0;
+}
+
+figcaption a {
+	color: #fff;
+	border: 2px solid #fff;
+	padding: 4px 10px;
+	text-decoration: none;
+}
+
+figcaption a:hover {
+	color: #4f5856;
+	background: #fff;
+}
+.videoevent a:hover{
+    opacity: 0.5;
+    transition-duration: 0.5;
 }

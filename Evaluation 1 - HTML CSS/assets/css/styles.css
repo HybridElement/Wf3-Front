@@ -1,0 +1,254 @@
+/* J'importe la Google Font */
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+body{
+    background-image: url(../img/background.png);
+}
+h1{
+    color: #C55394;
+    font-family: 'Courgette', cursive;
+}
+h2{
+    color:#EB43A3;
+    font-family: 'Courgette', cursive;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    height: 1580px;
+    position: relative;
+}
+
+/*------------------------------------------
+
+                    HEADER 
+                
+--------------------------------------------*/
+header{
+    /* dimension et position */
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    /* couleurs */
+    background-color: #C55394;
+}
+
+/* Logo */
+#logo{
+    /* position */
+    position: absolute;
+    left: 30px;
+    top: 5px;
+}
+#logo > p{
+    font-family: 'Courgette', cursive;
+    color: white;
+    font-size: 20px;
+}
+
+/*----------- Le Menu -------------*/
+
+/* Position du menu */
+nav {
+    float: right;
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: 70px;;
+}
+
+ul{
+    margin: 0;
+}
+
+/* Les li les uns à coté des autres */
+nav li{
+    display: inline;
+}
+
+/* Dimensions & tailles des liens pour les hovers */
+nav a {
+    /* le texte */
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    /* disposition */
+    display:inline-block;
+    /* positionnement et taille */
+    margin-top: -5px;
+    padding: 30px 15px;
+    height: 15px;  
+}
+
+/* le hover */
+nav a:hover{
+    background-color: #EB43A3;
+    /* avec une petite transition */
+    transition-duration: 0.5s;
+}
+
+/*------------------------------------------
+
+                 CONTENEUR 
+                
+--------------------------------------------*/
+#container{
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        margin: 0 auto;
+        padding-top:70px;
+
+    
+}
+#projecteur{
+    width: 100%;
+    height: 180px;
+    float: left;
+    position: relative;
+}
+#projecteur > p{
+    font-family: 'Courgette', cursive;
+    color: #C55394;
+    font-size: 20px;
+    /* Par dessus l'arc en ciel... */
+    position: absolute;
+    padding-top: 50px;
+    /* Je centre le texte */
+    text-align: center;
+    width: 100%;
+}
+#projecteur img{
+    /* Je centre l'image */
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+/* -----------------Bloc de contenu-------------- */
+
+#global{
+    /* Décoration */
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.219);
+    padding: 65px 30px;
+    border-radius: 10px;
+    /* positionnement et dimensions */
+    position: absolute;
+    top: 200px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+#licornes{
+    /* positionnement */
+    width: 100%;
+    float: left;
+    padding: 40px 0;
+}
+#imglic {
+    padding: 0px;
+} 
+#imglic li {
+    display: inline-block;
+    list-style: none;
+    width: 23%;
+}
+#imglic li figure{
+    margin: 10px;
+    position: relative;
+}
+#imglic li figure img{
+    width: 100%;
+}
+figcaption{
+    /* stylisation des légendes */
+    width: 100%;
+    background-color:  rgba(0, 0, 0, 0.700);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* Je place les légendes */
+    position: absolute;
+    bottom: 0px;
+    height: 35px;
+    line-height: 35px;
+
+}
+/* Animation de Zoom au survol */
+#imglic li:hover { 
+    transform: scale(1.1); 
+    transition-duration: 0.5s;
+}
+
+#contact{
+    /* positionnement */
+    width: 100%;
+    float: left;
+}
+
+/* google map */
+#gmap{
+    float: left;
+}
+/* placer les infos et la newsletter a droite de la googlemaps */
+#blocinfo{
+    float: left;
+    padding-left: 30px;
+
+}
+address{
+    font-style: initial;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 3px;
+}
+address a{
+    text-decoration: none;
+    color: #333;
+}
+#newsletter{
+    padding-top: 40px;
+}
+
+/* stylisation du bouton valider */
+#newsletter input[type=submit]{
+    margin-top: 10px;
+    width: 75px;
+    color: white;
+    height: 35px;
+    border:5px;
+    border-color: #eb43a3;
+    background: #c55394;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/*------------------------------------------
+
+                  FOOTER 
+                
+--------------------------------------------*/
+
+
+footer{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    /* couleur */
+    background-color: #C55394;
+}
+footer >p {
+    float: right;
+    padding-right: 20px;
+    color: white;
+    font-size: 10px;
+}
