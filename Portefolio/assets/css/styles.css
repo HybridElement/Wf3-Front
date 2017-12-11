@@ -149,12 +149,10 @@ address a:hover{
 /*fond*/
 
 .back{
-    background: linear-gradient( 
-            #202020 0%,
-            #000000 100%);
-    height:100vh;
+    background: linear-gradient(to bottom, #222222 0%,#000000 100%);
+    min-height:100vh;
     opacity: 0.9;
-    padding: 0 70px;
+    padding: 0 30px 70px 70px;
 }
 
 /* VIDEO */
@@ -186,6 +184,14 @@ h4, h3, h2 {
 @media screen and (max-width: 770px){
     .col-md-6{
         width: 100%;
+    }
+    .back{
+        padding:  0 70px 70px 70px;
+    }
+}
+@media screen and (max-width: 350px){
+    .back{
+        padding:  0 10px 20px 10px;
     }
 }
 .mp{
@@ -264,4 +270,8 @@ figcaption a:hover {
 .videoevent a:hover{
     opacity: 0.5;
     transition-duration: 0.5;
+    text-decoration: none;
+}
+.videoevent img{
+    filter: contrast(150%);
 }
