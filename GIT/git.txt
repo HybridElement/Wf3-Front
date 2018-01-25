@@ -1,0 +1,123 @@
+GIT
+
+- Industrialisation et harmonisation des pratiques.
+- Définition des process.
+- Versionné et documenté ces versions
+- Kanban (découpé par étapes)
+
+Historique :
+On débute le versionning  en 1972.
+On passe du local au centralisé (1990 -> CVS   /   2000 -> SVN - Commit plus détaillé)
+On pourra passer du local au centralisé (1997 - Bitkeeper) [intégré au projet Linux en 1999 en en version total en 2002]
+En 2005, la licence de bitKeeper s'arrête. Linux développe donc Git (en 3 semaines).
+
+
+
+Avantage
+- Outils Libre (OpenSource)
+- Performances
+- Adapté au gros projet
+- Multi-protocoles
+
+
+Git
+git add --help -> page de documenté
+
+git pwd -> savoir où l'on est
+
+ls lai -> tout montré du dossier
+
+mkdir -> créer document
+
+cd "nomdedossier" -> se placer dans le dossier
+
+cd -> se remettre à la racine
+
+git init -> initer git dans le dossier courant
+
+cd .. -> revenir au parent 
+
+rm -> effacer
+
+[ rm /Rf * -> flinguer disque ]
+
+git status -> savoir où on en est 
+
+git commit -> ouvre editeur
+
+dans éditeur :  i -> insertion
+                :wq -> il va écrire et quiter l'éditeur
+                :q! -> quitter sans enregistrer
+
+git config --global user.name (ou user.email) "..."
+
+.gitignore -> 
+
+touch -> créer un fichier s'il n'existe pas
+
+git log -> voir les commit
+
+git log -1 -> le dernier commit
+git log -10 -> les 10 derniers
+
+git log --before="2018-01-08" -> tout les commit avant le 08 01 2018
+
+git log --since=1.weeks -> tous les commit depuis 1 semaine
+
+
+
+Dans un fichier README : 
+- Présentation du projet
+- Utilisation du projet
+- liste des auteurs et contributeurs
+- la ou les licences utilisés
+- moyen de contact
+
+REPERTOIRE     ---- git add ---->         INDEX     ---- git commit ---->   DEPOT
+____________                           ____________                      ____________
+
+unhacked files                            sha1                                sha1
+git ls-files --others
+
+
+
+LES BRANCHES
+
+MASTER                              DEVELOP
+
+C1 ____________________________________C2
+                                        |
+                                        |
+                                        |
+                                        C3
+                                        |
+                                        |
+                                        |
+C5 ____________________________________C4
+
+
+
+
+V 1.20.12
+SemVer
+x.y.z
+
+x : V1 à V2 changement du code
+y : évolution majeur des fonctionnalités
+z : patch
+
+git tag v1.0.0 ->   ajouter un tag
+git tag v1.0.0 -d -> supprimer le tag
+
+git tag -a v1.0.0 -> ajout de commentaire au tag et dernier commit
+
+
+git branch "nomdelabranche" -> créer une branche
+
+git branch -> voir les branches
+
+git checkout "nomdelabranche" -> switcher dans la branche choisie
+
+git clone http://... -> clone un projet github
+
+git push origin develop -> exporter le commit vers github

@@ -1,0 +1,20 @@
+GITFLOW
+
+Branches éternelles :
+    - Master
+    - Develop
+
+Branches Ephemères : 
+    - Release (branche de version en fonction des tag - V1.0.0)
+                créer depuis la branche develop
+                mergé dans master & develop -> supprimée
+
+    - hotfix (branche de patch)
+                créer depuis master
+
+    - feature (nouvelle fonctionnalité)
+                branche locale
+                develop ->
+                -> develop
+
+src : http://datasift.github.io/gitflow/GitFlowMasterBranch.png
